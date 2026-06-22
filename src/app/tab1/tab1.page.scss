@@ -1,0 +1,19 @@
+.card {
+    min-height: auto;
+    max-height: 550px;
+    overflow-y: auto;
+    border-radius: 12px;
+}
+
+.prev, .next{
+  position: fixed;
+  bottom: 15px;
+  z-index: 10;
+}
+.prev {
+  left: 16px;
+}
+
+.next {
+  right: 16px;
+}
