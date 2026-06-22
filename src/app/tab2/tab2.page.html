@@ -14,4 +14,54 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-card class="ion-padding"> 
+    <ion-card-header> <ion-card-title class="ion-margin-bottom"><strong>LogIn</strong></ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input 
+          label="E-mail" 
+          labelPlacement="stacked" 
+          type="email" 
+          placeholder="example@domain.com"
+          [(ngModel)]="emailUser">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input 
+          label="Password" 
+          labelPlacement="stacked" 
+          type="password" 
+          placeholder="********"
+          [(ngModel)]="passwordUser">
+        </ion-input>
+      </ion-item>
+
+      <div class="ion-margin-top">
+        <ion-button shape="round" class="in" (click)="login()">
+          Enter
+        </ion-button>
+
+        <ion-button shape="round" class="off" fill="outline" (click)="logout()">
+          LogOff
+        </ion-button>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button class="res" color="success" (click)="register()">
+      <ion-icon src="assets/icon/botao-adicionar.svg"></ion-icon> 
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="start">
+    <ion-fab-button class="del" color="danger" (click)="deleteAccount()">
+      <ion-icon src="assets/icon/excluir.svg"></ion-icon> 
+    </ion-fab-button>
+  </ion-fab>
+
 </ion-content>
